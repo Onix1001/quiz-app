@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Answer from './components/answer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Router>
+    <Switch>
+      <Route path='/' exact component={App} />
+      <Route path='/soal/:index' exact component={Answer} />
+    </Switch>
+  </Router>
+  /* </React.StrictMode> */
 );
 
 // If you want to start measuring performance in your app, pass a function
