@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Main() {
 
-    const [ham_active, setHam_active] = useState(true)
+    const [ham_active, setHam_active] = useState(false)
     const [menu, setMenu] = useState(true)
 
     return (
@@ -12,7 +12,7 @@ export default function Main() {
                 <div className="container">
                     <div className="flex items-center justify-between relative">
                         <div className="px-4">
-                            <p className="font-bold text-xl py-6">EzQuizeez</p>
+                            <p className="font-bold text-xl py-6">Quizeez</p>
                         </div>
                         <div className="flex items-center px-4">
                             <button onClick={() => {
@@ -23,7 +23,7 @@ export default function Main() {
                                 <span className="hamburger-line transition duration-300 ease-in-out"></span>
                                 <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                             </button>
-                            <nav id="nav-menu" className={!menu ? 'hidden' : "absolute bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full"}>
+                            <nav id="nav-menu" className={menu ? 'hidden' : "absolute bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full"}>
                                 <ul className="block rounded-lg">
                                     <li className="group">
                                         <a href="#Home" className="text-base text-dark py-2 px-8 flex group-hover:bg-light">Profile</a>
