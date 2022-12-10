@@ -171,16 +171,18 @@ export default function App() {
                   {/*body*/}
                   <div className="relative p-6 flex-auto">
                     <table className="font-bold text-lg">
-                      <tr>
-                        <td>Benar</td>
-                        <td>:</td>
-                        <td>{benar}</td>
-                      </tr>
-                      <tr>
-                        <td>Salah</td>
-                        <td>:</td>
-                        <td>{salah}</td>
-                      </tr>
+                      <tbody>
+                        <tr>
+                          <td>Benar</td>
+                          <td>:</td>
+                          <td>{benar}</td>
+                        </tr>
+                        <tr>
+                          <td>Salah</td>
+                          <td>:</td>
+                          <td>{salah}</td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                   {/*footer*/}
