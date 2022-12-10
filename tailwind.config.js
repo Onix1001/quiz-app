@@ -17,6 +17,13 @@ module.exports = {
           '75%': { transform: 'scale(1.1)' },
           '100%': { transform: 'scale(1)' },
         }
+      },
+      colors: {
+        primary: '#354F52',
+        secondary: '#52796F',
+        teriary: '#84A98C',
+        light: '#CAD2C5',
+        dark: '#2F3E46'
       }
     },
   },
