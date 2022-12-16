@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model pertanyaan {
+  id         Int       @id @default(autoincrement())
+  pertanyaan String
+  jawaban    jawaban[]
+}
+
+model jawaban {
+  id           Int         @id @default(autoincrement())
+  jawaban      String
+  betulkah     Boolean
+  pertanyaan   pertanyaan? @relation(fields: [pertanyaanId], references: [id])
+  pertanyaanId Int?
+}
